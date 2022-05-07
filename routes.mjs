@@ -6,6 +6,7 @@ import initProductsController from './controllers/products.mjs';
 export default function routes(app) {
   const ProductsController = initProductsController(db);
   app.get('/products', ProductsController.index);
+  app.post('/products', ProductsController.create);
 
   app.get('/home', (request, response) => {
     response.sendFile(resolve('dist', 'main.html'));

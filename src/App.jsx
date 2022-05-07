@@ -4,6 +4,7 @@ import axios from 'axios';
 import Paper from '@mui/material/Paper';
 
 import InventoryTable from './components/InventoryTable.jsx';
+import AddInventory from './components/AddInventory.jsx';
 
 export default function App() {
   const [products, setProducts] = useState([]);
@@ -19,6 +20,7 @@ export default function App() {
   return (
     <div className="app-container">
       This is App.jsx
+      <AddInventory />
       <Paper elevation={3}>
         {products.length === 0 && (
           <button type="button" onClick={getProducts}>
