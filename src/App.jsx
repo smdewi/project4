@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 import Paper from '@mui/material/Paper';
+import Button from '@mui/material/Button';
 
 import InventoryTable from './components/InventoryTable.jsx';
 import AddInventory from './components/AddInventory.jsx';
@@ -22,11 +23,9 @@ export default function App() {
       This is App.jsx
       <AddInventory />
       <Paper elevation={3}>
-        {products.length === 0 && (
-          <button type="button" onClick={getProducts}>
-            Inventory
-          </button>
-        )}
+        <Button variant="contained" onClick={getProducts}>
+          Inventory
+        </Button>
         <InventoryTable products={products} />
       </Paper>
     </div>
