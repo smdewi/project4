@@ -6,6 +6,7 @@ import Button from '@mui/material/Button';
 
 import InventoryTable from './components/InventoryTable.jsx';
 import AddInventory from './components/AddInventory.jsx';
+import AddProject from './components/AddProject.jsx';
 
 export default function App() {
   const [products, setProducts] = useState([]);
@@ -28,6 +29,7 @@ export default function App() {
         </Button>
         <InventoryTable products={products} />
       </Paper>
+      <AddProject />
     </div>
   );
 }

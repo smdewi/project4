@@ -3,6 +3,7 @@ import url from 'url';
 import allConfig from '../config/config.js';
 
 import productModel from './product.mjs';
+import projectModel from './project.mjs';
 
 const env = process.env.NODE_ENV || 'development';
 
@@ -33,6 +34,7 @@ if (env === 'production') {
 }
 
 db.Product = productModel(sequelize, Sequelize.DataTypes);
+db.Project = projectModel(sequelize, Sequelize.DataTypes);
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;

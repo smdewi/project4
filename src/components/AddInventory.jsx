@@ -38,7 +38,7 @@ export default function AddInventory({ setProducts }) {
   return (
     <div className="col-sm">
       <div className="admin">
-        <h2>Add an item</h2>
+        <h2>Add Inventory</h2>
         <label>
           Product Name
           <input
