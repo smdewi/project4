@@ -4,9 +4,11 @@ import axios from 'axios';
 import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button';
 
+import NavBar from './components/NavBar.jsx';
 import InventoryTable from './components/InventoryTable.jsx';
 import AddInventory from './components/AddInventory.jsx';
 import AddProject from './components/AddProject.jsx';
+import BasicTabs from './components/Tabs.jsx';
 
 export default function App() {
   const [products, setProducts] = useState([]);
@@ -21,11 +23,15 @@ export default function App() {
 
   return (
     <div className="app-container">
-      This is App.jsx
+      <NavBar />
+      <BasicTabs />
       <AddInventory />
       <Paper elevation={3}>
         <Button variant="contained" onClick={getProducts}>
           Inventory
+        </Button>
+        <Button variant="contained">
+          Re-order
         </Button>
         <InventoryTable products={products} />
       </Paper>

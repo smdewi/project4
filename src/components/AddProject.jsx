@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import Button from '@mui/material/Button';
 
 export default function AddProject({ setProjects }) {
   const initialValues = {
@@ -36,30 +37,30 @@ export default function AddProject({ setProjects }) {
       <div className="admin">
         <h2>Add Project</h2>
         <label>
-          Project Name
           <input
             name="projectName"
+            placeholder="Project Name"
             value={formValues.projectName}
             onChange={handleInputChange}
           />
         </label>
         <label>
-          Project Description
           <input
             name="projectDescription"
+            placeholder="Project Description"
             value={formValues.projectDescription}
             onChange={handleInputChange}
           />
         </label>
         <label>
-          Project Budget
           <input
             name="projectBudget"
+            placeholder="Budget"
             value={formValues.projectBudget}
             onChange={handleInputChange}
           />
         </label>
-        <button type="button" onClick={handleSubmit}>Submit</button>
+        <Button variant="contained" onClick={handleSubmit}>Submit</Button>
       </div>
     </div>
   );
