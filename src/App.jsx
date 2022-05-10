@@ -25,7 +25,7 @@ export default function App() {
     <div className="app-container">
       <NavBar />
       <BasicTabs />
-      <AddInventory />
+      <AddInventory setProducts={setProducts} />
       <Paper elevation={3}>
         <Button variant="contained" onClick={getProducts}>
           Inventory

@@ -12,7 +12,7 @@ export default function InventoryTable({ products }) {
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
-          <TableRow>
+          <TableRow key="headerRow">
             <TableCell>Product Name</TableCell>
             <TableCell align="left">Description</TableCell>
             <TableCell align="right">Price</TableCell>
@@ -23,7 +23,7 @@ export default function InventoryTable({ products }) {
         <TableBody>
           {products.map((row) => (
             <TableRow
-              key={row.index}
+              key={row.name}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
               <TableCell component="th" scope="row">
